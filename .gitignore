@@ -1,1 +1,3 @@
 roidz.code-workspace
+venv/
+__pycache__/
