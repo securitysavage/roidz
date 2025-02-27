@@ -1,11 +1,16 @@
 import pygame
 import random
+import math
 from constants import *
-from circleshape import CircleShape
+from circleshape import *
+from randompoly import RandomPoly
+
 
 class Asteroid(CircleShape):
     def __init__(self, x, y, radius):
         super().__init__(x, y, radius)
+
+        self.mass = math.pi * self.radius ** 3.0 * random.uniform(*ASTEROID_MASS_VARIANCE)
     
     def draw(self, screen):
         pygame.draw.circle(screen, "red", self.position, self.radius, 2)

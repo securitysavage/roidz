@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 
+# load libs/modules
+
 import sys
 import pygame
-from constants import * # load pygame library and constants module
-from player import Player # load player module
+
+from constants import *
+from player import Player 
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
 from shot import Shot
+
+
 
 def main():
     pygame.init()
@@ -43,6 +48,7 @@ def main():
 
             for shot in shots:
                 if asteroid.collides_with(shot):
+                    score += 10
                     shot.kill()
                     asteroid.split()
         
