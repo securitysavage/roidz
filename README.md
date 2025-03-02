@@ -1,1 +1,1 @@
-# roidz
+Boot.dev Asteroids project
